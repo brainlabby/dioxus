@@ -78,7 +78,7 @@ js-sys = { workspace = true, optional = true }
 wasm-bindgen = { workspace = true, optional = true }
 wasm-bindgen-futures = { workspace = true, optional = true }
 wasm-streams = { version = "0.4", optional = true }
-content_disposition = { version = "0.4", optional = true }
+content_disposition = "0.4"
 
 # native websocket deps
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
@@ -99,7 +99,6 @@ web = [
     "dep:wasm-bindgen",
     "dep:wasm-bindgen-futures",
     "dep:wasm-streams",
-    "dep:content_disposition",
 ]
 native = []
 server = [
