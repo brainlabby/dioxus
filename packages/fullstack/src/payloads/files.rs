@@ -126,8 +126,8 @@ impl IntoRequest for FileStream {
                 ));
             };
 
-            #[cfg(feature = "web")]
-            if cfg!(target_arch = "wasm32") {
+            #[cfg(all(feature = "web", target_arch = "wasm32"))]
+            if true {
                 use js_sys::escape;
                 use wasm_bindgen::JsCast;
 
