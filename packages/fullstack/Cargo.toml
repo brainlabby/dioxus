@@ -69,17 +69,18 @@ tower-layer = { version = "0.3.3", optional = true }
 postcard = { features = ["alloc", "use-std"], optional = true, workspace = true, default-features = true }
 rmp-serde = { version = "1.3", optional = true }
 async-stream = "0.3.6"
-content_disposition = "0.4.0"
+
 
 
 # websocket stuff
-[target.'cfg(target_arch = "wasm32")'.dependencies]
+#[target.'cfg(target_arch = "wasm32")'.dependencies]
 web-sys = { workspace = true, features = ["WebSocket", "CloseEvent", "ErrorEvent", "Event", "MessageEvent", "BinaryType", "FormData", "Response", "ReadableStream", "AbortController", "File", "ReadableStream", "HtmlFormElement", "FormData"], optional = true }
 gloo-net = { version = "0.6", optional = true }
 js-sys = { workspace = true, optional = true }
 wasm-bindgen = { workspace = true, optional = true }
 wasm-bindgen-futures = { workspace = true, optional = true }
 wasm-streams = { version = "0.4", optional = true }
+content_disposition = "0.4.0"
 
 # native websocket deps
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
